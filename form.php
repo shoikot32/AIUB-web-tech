@@ -7,9 +7,13 @@
 
     <image src="./image/plane.jpg" alt="airplane" width="450" height="200"> <br> <br> <br>
 
-    <form action="submit.php" method="post" target="_blank">
+    <fieldset>
 
-        <table  cellspacing="10">
+        <legend>Personal Information</legend>
+    
+    <form action="submit.php" method="post" >
+
+        <table  cellspacing="10" >
 
             <tr>
                 <td><label for="firstname">First Name :</label>  <br><br></td>
@@ -74,6 +78,8 @@
         </table>
 
     </form>
+    
+    </fieldset>
 
 </body>
 </html>
