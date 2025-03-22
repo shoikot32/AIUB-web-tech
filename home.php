@@ -11,7 +11,7 @@
 
     <h2>Welcome to ABC Airplane Booking</h2>
 
-    <form action="home.php" method="post" target="_blank">
+    <form action="Airplane booking.php" method="post" target="_blank">
 
     <h2>Flight Details</h2>
 
