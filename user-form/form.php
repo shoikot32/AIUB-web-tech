@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>User Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>ABC Airlines User Registration</h1>
