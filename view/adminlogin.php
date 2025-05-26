@@ -57,6 +57,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         .error {
             color: red;
         }
+        .link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0d6efd;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div><input type="text" name="username" placeholder="Username"></div>
         <div><input type="password" name="password" placeholder="Password"></div>
         <div><input type="submit" value="Login"></div>
+        <div><a href="http://localhost/view/firstlab/view/userlogin.php" class="link">Back</a></div>
+
+
         <div class="error"><?php echo $errMsg; ?></div>
     </form>
 

@@ -18,6 +18,7 @@ include '../control/useredit_action.php';
         <label for="search_value">Search by ID or Username:</label>
         <input type="text" id="search_value" name="search_value" value="<?php echo htmlspecialchars($searchedValue ?? ''); ?>">
         <input type="submit" name="search" value="Search">
+        <input type="submit" name="all" value="Show All Users"><br>
         <span style="color:red;"><?php echo $searchError ?? ''; ?></span>
     </form>
 
@@ -82,15 +83,49 @@ include '../control/useredit_action.php';
                     <td colspan="2" style="color:green; text-align:center;"><?php echo $errMsg ?? ''; ?></td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align:center;"><a href="adminlogim.php" class="link">Logout</a></td>
+                    <td colspan="2" style="text-align:center;"><a href="http://localhost/view/firstlab/view/adminlogin.php" class="link">Logout</a></td>
                 </tr>
             </table>
         </form>
     <?php endif; ?>
 
-    <br>
-    <footer style="text-align:center; color:#666;">
-        2025 ABC Airlines. All rights reserved.
-    </footer>
+    <!-- Show All Users -->
+    <?php if (!empty($allUsers)) : ?>
+        <h2>All Registered Users</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Passport</th>
+                    <th>DOB</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($allUsers as $user) : ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($user['id']); ?></td>
+                        <td><?php echo htmlspecialchars($user['firstname']); ?></td>
+                        <td><?php echo htmlspecialchars($user['lastname']); ?></td>
+                        <td><?php echo htmlspecialchars($user['username']); ?></td>
+                        <td><?php echo htmlspecialchars($user['email']); ?></td>
+                        <td><?php echo htmlspecialchars($user['phone']); ?></td>
+                        <td><?php echo htmlspecialchars($user['passport']); ?></td>
+                        <td><?php echo htmlspecialchars($user['dob']); ?></td>
+                        <td><?php echo htmlspecialchars($user['gender']); ?></td>
+                        <td><?php echo htmlspecialchars($user['address']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php elseif (isset($_POST['all'])) : ?>
+        <p style="color:red;">No users found in the database.</p>
+    <?php endif; ?>
 </body>
 </html>

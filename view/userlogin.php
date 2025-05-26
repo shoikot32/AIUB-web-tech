@@ -33,6 +33,8 @@
                     <td> <a href="http://localhost/view/firstlab/view/user_reg.php" class="link">Sign Up </a></td>
                     <td><input type="submit" name="submit" value="login"></td>
                 </tr>
+                <td> <a href="http://localhost/view/firstlab/view/adminlogin.php" class="link">Admin panel </a></td>
+                <tr>
 
             </table>
         </form>

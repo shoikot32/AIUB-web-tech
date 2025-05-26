@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // UPDATE
     if (isset($_POST['update'])) {
         $id = $_POST['user_id'];
-
         $firstname = trim($_POST['firstname']);
         $lastname = trim($_POST['lastname']);
         $username = trim($_POST['username']);
@@ -65,12 +64,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 
-    // ADD – redirect to registration page when Add button is clicked
+    
     if (isset($_POST['add'])) {
         closeCon($conn);
-        header("Location: ../view/user_reg.php"); // assuming user_reg.php is your form page
+        header("Location: ../view/user_reg.php"); 
         exit();
     }
+    $allUsers = getAllUsers($conn);
 
     closeCon($conn);
 }

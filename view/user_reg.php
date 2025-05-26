@@ -123,7 +123,7 @@
 
             <!-- Submit -->
             <tr>
-                <td></td>
+                <td><a href="http://localhost/view/firstlab/view/userlogin.php" class="link">Back</a></td>
                 <td><input type="submit" name="submit" value="Submit"></td>
             </tr>
 
