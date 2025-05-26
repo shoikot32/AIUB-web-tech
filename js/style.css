@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to right, #dbeeff, #f0f8ff);
     margin: 0;
     padding: 20px;
@@ -68,16 +68,15 @@ textarea:focus {
 }
 
 #address {
-    width: 500px;
+    width: 100%;
     height: 100px;
-    padding: 10px;
     font-size: 14px;
     border: 1px solid #776969;
     border-radius: 5px;
     resize: vertical;
     background-color: #ffffff;
+    padding: 10px;
 }
-
 
 input[type="radio"] {
     margin-right: 10px;
@@ -92,4 +91,18 @@ input[type="submit"] {
     cursor: pointer;
     float: right;
     font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+/* Error Message Styling */
+.error {
+    color: red !important;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 4px;
 }
