@@ -14,7 +14,7 @@ if (isset($_POST['upload'])) {
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     $message = "";
-
+  
     // Validate image
 if ($_FILES["fileToUpload"]["error"] == UPLOAD_ERR_NO_FILE) {
     $message .= "No file selected.<br>";
